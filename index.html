@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>营养成分</title>
+    <link rel="stylesheet" href="healthStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div id="menu"></div>
+
+    <div class="content">
+        <h1>This is my index...</h1>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+        $(document).ready(function () {
+            $.get("menu.html", function (data) {
+                $("#menu").html(data);
+            });
+
+            $.get("footer.html", function (data) {
+                $("#footer").html(data);
+            });
+        });
+    </script>
+</body>
+
+</html>
